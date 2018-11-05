@@ -354,7 +354,7 @@ local function tasklist_update(s, w, buttons, filter, data, style, update_functi
         if not (c.skip_taskbar or c.hidden
             or c.type == "splash" or c.type == "dock" or c.type == "desktop")
             and filter(c, s) then
-            table.insert(clients, c)
+            table.insert(clients, 1, c)
         end
     end
 
